@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-Stopwatch Redirecter</title>
+    <script src="osredirecter.js"></script>
+</head>
+
+<body>
+    <h1>Online-Stopwatch Redirecter</h1>
+    <p>Simple tool to redirect to Online-Stopwatch</p>
+    <p>You can either input the time tag in the input field below, or add it as a URL parameter</p>
+    <p>Example: <i>danielquijada.github.io/online-stopwatch-redirecter/?timer=10m15s</i></p>
+
+    <label for="timer">Timer</label>
+    <input type="search" name="timer" id="timer"
+        placeholder="10 minutes 15 seconds | 32m 10 hours | 3 min 2 min 1 min (these are added up) | 51 yrs and 2 scs | 5 min - 10s"
+        style="width: 50%" onkeydown="if (event.key == 'Enter'){ processTimerClick() }">
+    <button id="timer-go" onclick=processTimerClick()>Go</button>
+
+    <h2>Supported times (accepted keywords):</h2>
+    <ul>
+        <li><b>Seconds</b> <i>(numbers with any non-accepted keywords or without keywords will default to seconds)</i>
+        </li>
+        <li><b>Minutes</b> <i>(minutes/minute/mins/min/m)</i></li>
+        <li><b>Hours</b> <i>(hours/hour/hrs/hr/h)</i></li>
+        <li><b>Days</b> <i>(days/day/d)</i></li>
+        <li><b>Weeks</b> <i>(weeks/week/w)</i></li>
+        <li><b>Months (31 days)</b> <i>(months/month/mon)</i></li>
+        <li><b>Years</b> <i>(years/year/yrs/yr/y)</i></li>
+    </ul>
+</body>
+
+</html>
