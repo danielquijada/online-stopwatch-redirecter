@@ -14,7 +14,7 @@ Check it  [Here](https://danielquijada.github.io/online-stopwatch-redirecter/)!
 
 Time tags can be inputed directly in the input or as an URL parameter.
 
-Example: `danielquijada.github.io/online-stopwatch-redirecter/?timer=10m15s` [Test](danielquijada.github.io/online-stopwatch-redirecter/?timer=10m15s)
+Example: `danielquijada.github.io/online-stopwatch-redirecter/?timer=10m15s` [Test](https://danielquijada.github.io/online-stopwatch-redirecter/?timer=10m15s)
 
 ## Supported Time Tags
 
