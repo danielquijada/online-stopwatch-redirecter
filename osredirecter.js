@@ -28,7 +28,7 @@ const tags = {
 
 // If we have the urlParam timer, redirect instantly
 const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get('timer')) processTimer(urlParams.get('timer'));
+if (urlParams.has('timer')) processTimer(urlParams.get('timer'));
 
 function processTimerClick() {
     let input = document.getElementById('timer').value;
@@ -39,7 +39,8 @@ function processTimer(timerString) {
     const totalSeconds = getTotalSeconds(timerString);
 
     // And that's it, there we go, bye bye ^^
-    window.location.replace(`https://www.online-stopwatch.com/timer/${totalSeconds}/`);
+    urlParams.delete('timer');
+    window.location.replace(`https://www.online-stopwatch.com/timer/${totalSeconds}/?${urlParams.toString()}`);
 }
 
 function getTotalSeconds(timerString) {
