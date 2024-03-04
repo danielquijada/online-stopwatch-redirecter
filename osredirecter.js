@@ -40,7 +40,14 @@ function processTimer(timerString) {
 
     // And that's it, there we go, bye bye ^^
     urlParams.delete('timer');
-    window.location.replace(`https://www.online-stopwatch.com/timer/${totalSeconds}/?${urlParams.toString()}`);
+    // Set sound to default bell
+    urlParams.append('ns', '1');
+    urlParams.append('countdown', getCountdownString(totalSeconds));
+    window.location.replace(`https://www.online-stopwatch.com/eggtimer-countdown/?${urlParams.toString()}`);
+}
+
+function getCountdownString(seconds) {
+    return '00:00:' + (seconds < 10 ? '0' : '') + seconds;
 }
 
 function getTotalSeconds(timerString) {
